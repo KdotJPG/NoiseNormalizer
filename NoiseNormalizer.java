@@ -25,7 +25,7 @@ public class NoiseNormalizer {
 	
 	// Tweak this and re-run to make sure you found the global maximum
 	// Make sure you're inside the cluster of points
-	public static double[] FIRST_POINT = { 0.2, 0.0 };
+	public static double[] FIRST_POINT = { 0.2, 0.6 };
 	
 	// Unskew factor
 	public static double G = -0.211324865405187;
@@ -49,6 +49,11 @@ public class NoiseNormalizer {
 	};
 
 	public static void main(String[] args) {
+		
+		/*for (int j = 0; j < GRADIENTS.length; j++) {
+			double[] currentGradient = GRADIENTS[j];
+			for (int i = 0; i < N; i++) currentGradient[i] /= 0.05382168030817933;
+		}*/
 		
 		// Surrounding lattice points (no repeats)
 		// NOTE: May need to be changed to provide the right points for OpenSimplex
